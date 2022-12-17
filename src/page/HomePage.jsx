@@ -19,8 +19,8 @@ const BoxContent = ({ name, url, onBoxClick }) => {
 
 const HomePage = () => {
     const [items, setItems] = useState([]);
-    const [image, setImage]= useState([]);
-    const [name, setName] =useState([]);
+    // const [image, setImage]= useState([]);
+    // const [name, setName] =useState([]);
     const [chosenPokemon, setChosenPokemon] = useState({});
     const getItems = async () => {
         const response = await fetch("https://pokeapi.co/api/v2/pokemon");
@@ -36,16 +36,16 @@ const HomePage = () => {
     useEffect(() => {
         getItems();
     }, [])
- function handleClick(image,name){
-    setImage(image)
-    setName(name)
+//  function handleClick(image,name){
+//     setImage(image)
+//     setName(name)
     
-    const pokemos={
-        name:name,
-        image:image,
-    } 
-    localStorage.setItems('pokemons',JSON.stringify(pokemos))
- }
+//     const pokemos={
+//         name:name,
+//         image:image,
+//     } 
+//     localStorage.setItems('pokemons',JSON.stringify(pokemos))
+//  }
 
     return (
         <div className="p-6 ">
